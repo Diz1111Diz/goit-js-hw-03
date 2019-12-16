@@ -1,9 +1,8 @@
-const countProps = function(obj) {
-  number = 0;
-  for (key in obj){
-      number ++         
-  }
-  return number;
+const countProps = function (obj) {
+
+  const number = Object.entries(obj);
+
+  return number.length;  
 };
 
 /*
@@ -11,6 +10,13 @@ const countProps = function(obj) {
  */
 console.log(countProps({})); // 0
 
-console.log(countProps({ name: 'Mango', age: 2 })); // 2
+console.log(countProps({
+  name: 'Mango',
+  age: 2
+})); // 2
 
-console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+console.log(countProps({
+  mail: 'poly@mail.com',
+  isOnline: true,
+  score: 500
+})); // 3
